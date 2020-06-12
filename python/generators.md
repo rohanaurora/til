@@ -1,9 +1,9 @@
 # Generators and Generator Expressions
 
-# Generators are written like regular functions but use the yield statement whenever they want to return data.
-# Each time next() is called on it, the generator resumes where it left off (it remembers all the data values and
-# which statement was last executed). An example shows that generators can be trivially easy to create:
-# Source - https://docs.python.org/3/tutorial/classes.html#generators
+Generators are written like regular functions but use the yield statement whenever they want to return data.
+Each time next() is called on it, the generator resumes where it left off (it remembers all the data values and
+which statement was last executed). An example shows that generators can be trivially easy to create:
+Source - https://docs.python.org/3/tutorial/classes.html#generators
 
 ```python
 data = 'rohan'
