@@ -9,6 +9,7 @@ A collection of concise write-ups on small things I learn on a daily basis while
 ### Python
 
 - [Access Instance Variables](python/access-instance-variables.md)
+- [Generators](python/generators.md)
 
 ---
 
