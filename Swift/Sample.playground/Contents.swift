@@ -24,3 +24,9 @@ import Foundation
 //let t = array.lazy.map({ $0 / 2 })
 //t.reduce(0, +)
 
+let nf = NumberFormatter()
+nf.locale = Locale.init(identifier: "hi")
+nf.numberStyle = .spellOut
+let num = nf.string(from: 10_000_000)
+print(num)
+
