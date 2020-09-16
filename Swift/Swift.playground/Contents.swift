@@ -113,35 +113,35 @@ enum Result: String {
 //    print("Driving")
 //}
 
-//func raceReady(mode: (String) -> Void) {
-//    print("Ready")
-//    mode("start my car")
-//    print("Arrived")
+func raceReady(mode: (String) -> Void) {
+    print("Ready")
+    mode("start my car")
+    print("Arrived")
+}
+
+raceReady { (xyz: String) in
+    print("I am going to \(xyz)")
+}
+
+
+//func groceryShopping(items: (String) -> [String]) {
+//    print("Start shopping")
+//    let i = items("Spinach")
+//    for j in i {
+//        print("Bought \(j)")
+//    }
+//    print("Finished")
 //}
 //
-//raceReady { (xyz: String) in
-//    print("I am going to \(xyz)")
+//let fruits = "Apples"
+//
+//groceryShopping { (veggies) -> [String] in
+//    return [veggies, fruits]
 //}
-
-
-func groceryShopping(items: (String) -> [String]) {
-    print("Start shopping")
-    let i = items("Spinach")
-    for j in i {
-        print("Bought \(j)")
-    }
-    print("Finished")
-}
-
-let fruits = "Apples"
-
-groceryShopping { (veggies) -> [String] in
-    return [veggies, fruits]
-}
-
-groceryShopping {
-    [$0, fruits]
-}
+//
+//groceryShopping {
+//    [$0, fruits]
+//}
 
 //func teaTasting(teaName: (String, String) -> String) {
 //    print("Go to the location")
