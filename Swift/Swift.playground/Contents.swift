@@ -1,29 +1,29 @@
 import Foundation
 
-let colors = Set(["red", "green", "blue"])
-var tup = (name: "Rohan", lname: "Aurora")
-
-let dict = ["Age":32, "Height":6.2]
-
-let eStringDict = [String:String]()
-let eStringArray = [String]()
-let eSet = Set<String>()
-
-enum Result: String {
-    case success = "SU"
-    case failure
-    
-    var status: String {
-        switch self {
-        case .failure:
-            print("Failed")
-            return Result.failure.rawValue
-        default:
-            print("Success")
-            return Result.success.rawValue
-        }
-    }
-}
+//let colors = Set(["red", "green", "blue"])
+//var tup = (name: "Rohan", lname: "Aurora")
+//
+//let dict = ["Age":32, "Height":6.2]
+//
+//let eStringDict = [String:String]()
+//let eStringArray = [String]()
+//let eSet = Set<String>()
+//
+//enum Result: String {
+//    case success = "SU"
+//    case failure
+//
+//    var status: String {
+//        switch self {
+//        case .failure:
+//            print("Failed")
+//            return Result.failure.rawValue
+//        default:
+//            print("Success")
+//            return Result.success.rawValue
+//        }
+//    }
+//}
 
 
 //
@@ -113,15 +113,15 @@ enum Result: String {
 //    print("Driving")
 //}
 
-func raceReady(mode: (String) -> Void) {
-    print("Ready")
-    mode("start my car")
-    print("Arrived")
-}
-
-raceReady { (xyz: String) in
-    print("I am going to \(xyz)")
-}
+//func raceReady(mode: (String) -> Void) {
+//    print("Ready")
+//    mode("start my car")
+//    print("Arrived")
+//}
+//
+//raceReady { (xyz: String) in
+//    print("I am going to \(xyz)")
+//}
 
 
 //func groceryShopping(items: (String) -> [String]) {
@@ -219,3 +219,31 @@ raceReady { (xyz: String) in
 //}
 
 
+func someLoop(loop: (Int) -> [Int]) {
+    let end = 10
+    print("Start")
+    let o  = loop(end)
+    print("Display")
+    print("\(o)")
+    print("End")
+}
+
+someLoop { (xyz) -> [Int] in
+    let x = 0..<xyz
+    var xA = [Int]()
+    x.forEach({xA.append($0)})
+    return xA
+}
+
+@propertyWrapper
+struct TwelveOrLess {
+    private var number: Int
+    init() { self.number = 0 }
+    var wrappedValue: Int {
+        get { return number }
+        set { number = min(newValue, 12) }
+    }
+}
+var tw = TwelveOrLess()
+tw.wrappedValue = 3
+print(tw.wrappedValue)
