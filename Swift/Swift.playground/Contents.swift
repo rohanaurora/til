@@ -124,24 +124,24 @@ import Foundation
 //}
 
 
-//func groceryShopping(items: (String) -> [String]) {
-//    print("Start shopping")
-//    let i = items("Spinach")
-//    for j in i {
-//        print("Bought \(j)")
-//    }
-//    print("Finished")
-//}
-//
-//let fruits = "Apples"
-//
-//groceryShopping { (veggies) -> [String] in
-//    return [veggies, fruits]
-//}
-//
-//groceryShopping {
-//    [$0, fruits]
-//}
+func groceryShopping(items: (String) -> [String]) {
+    print("Start shopping")
+    let i = items("Spinach")
+    for j in i {
+        print("Bought \(j)")
+    }
+    print("Finished")
+}
+
+let fruits = "Apples"
+
+groceryShopping { (veggies) -> [String] in
+    return [veggies, fruits]
+}
+
+groceryShopping {
+    [$0, fruits]
+}
 
 //func teaTasting(teaName: (String, String) -> String) {
 //    print("Go to the location")
@@ -219,31 +219,31 @@ import Foundation
 //}
 
 
-func someLoop(loop: (Int) -> [Int]) {
-    let end = 10
-    print("Start")
-    let o  = loop(end)
-    print("Display")
-    print("\(o)")
-    print("End")
-}
-
-someLoop { (xyz) -> [Int] in
-    let x = 0..<xyz
-    var xA = [Int]()
-    x.forEach({xA.append($0)})
-    return xA
-}
-
-@propertyWrapper
-struct TwelveOrLess {
-    private var number: Int
-    init() { self.number = 0 }
-    var wrappedValue: Int {
-        get { return number }
-        set { number = min(newValue, 12) }
-    }
-}
-var tw = TwelveOrLess()
-tw.wrappedValue = 3
-print(tw.wrappedValue)
+//func someLoop(loop: (Int) -> [Int]) {
+//    let end = 10
+//    print("Start")
+//    let o  = loop(end)
+//    print("Display")
+//    print("\(o)")
+//    print("End")
+//}
+//
+//someLoop { (xyz) -> [Int] in
+//    let x = 0..<xyz
+//    var xA = [Int]()
+//    x.forEach({xA.append($0)})
+//    return xA
+//}
+//
+//@propertyWrapper
+//struct TwelveOrLess {
+//    private var number: Int
+//    init() { self.number = 0 }
+//    var wrappedValue: Int {
+//        get { return number }
+//        set { number = min(newValue, 12) }
+//    }
+//}
+//var tw = TwelveOrLess()
+//tw.wrappedValue = 3
+//print(tw.wrappedValue)
