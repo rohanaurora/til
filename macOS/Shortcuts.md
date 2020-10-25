@@ -7,3 +7,6 @@ Open items in the enclosing folder directly from a Spotlight search in macOS usi
 Command-Delete: Move the selected item to the Trash.
 Shift-Command-Delete: Empty the Trash.
 Option-Shift-Command-Delete: Empty the Trash without confirmation dialog.
+
+Hold the Shift and Option key on your keyboard and click on the Bluetooth icon in your Mac’s drop-down menu bar
+Select Debug > Reset the Bluetooth module
