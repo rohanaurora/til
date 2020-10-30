@@ -13,3 +13,4 @@ Select Debug > Reset the Bluetooth module
 
 Finder: Cmd+Shift+G to navigate anywhere with autocomplete.
 
+$HOME - for home directory
