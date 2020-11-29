@@ -14,3 +14,5 @@ Select Debug > Reset the Bluetooth module
 Finder: Cmd+Shift+G to navigate anywhere with autocomplete.
 
 $HOME - for home directory
+
+Hold Cmd+Tab you select an app icon, then tap “Q” without letting go of Cmd+Tab to quit the selected app.
